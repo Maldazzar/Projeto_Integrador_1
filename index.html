@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hemovida</title>
+</head>
+<body>
+    <header>
+     <h1>Hemovida</h1>
+    </header>
+    
+<main>
+    <section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./home.html">
+                        Home
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+</main>
+
+<main>
+    <section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./sobre.html">
+                        Sobre Nós
+                    </a>
+                
+                </li>
+            </ul>
+        </nav>
+    </section>
+</main>
+
+<main>
+    <section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./cadastro.html">
+                        Cadastro
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+</main>
+    
+<main>
+    <section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./educação.html">
+                        Educação
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+</main>
+
+<main>
+    <section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./contato.html">
+                        Contato
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+</main>
+
+<body>
+    <form>
+        <input type="text" placeholder="Digite aqui o que você procura">
+        <button type="submit">Buscar</button>
+    </form>
+</body>
+
+<main>
+    <section>
+        <h2>Estoque de Sangue Por Estado</h2>
+        
+    </section>
+
+    <h3>Escolha o Estado</h3>
+    <form>
+        <label for="estado">Estado:</label>
+        <select id="estado" name="estado" onchange="showHemocentros()">
+            <option value="">Selecione...</option>
+            <option value="ac">Acre</option>
+            <option value="al">Alagoas</option>
+            <option value="ap">Amapá</option>
+            <option value="am">Amazonas</option>
+            <option value="ba">Bahia</option>
+            <option value="ce">Ceará</option>
+            <option value="df">Distrito Federal</option>
+            <option value="es">Espírito Santo</option>
+            <option value="go">Goiás</option>
+            <option value="ma">Maranhão</option>
+            <option value="mt">Mato Grosso</option>
+            <option value="ms">Mato Grosso do Sul</option>
+            <option value="mg">Minas Gerais</option>
+            <option value="pa">Pará</option>
+            <option value="pb">Paraíba</option>
+            <option value="pr">Paraná</option>
+            <option value="pe">Pernambuco</option>
+            <option value="pi">Piauí</option>
+            <option value="rj">Rio de Janeiro</option>
+            <option value="rn">Rio Grande do Norte</option>
+            <option value="rs">Rio Grande do Sul</option>
+            <option value="ro">Rondônia</option>
+            <option value="rr">Roraima</option>
+            <option value="sc">Santa Catarina</option>
+            <option value="sp">São Paulo</option>
+            <option value="se">Sergipe</option>
+            <option value="to">Tocantins</option>
+
+        </select>
+    
+
+</main>
+
+<body>
+    <table border="1">
+        <tr>
+            
+            <td>baixo</td>
+            <td>A+</td>
+            <td>B+</td>
+            <td>B-</td>
+            <td>AB+</td>
+        </tr>
+        <tr>
+            <td>regular</td>
+            <td>AB-</td>
+            <td>O+</td>
+            <td>O-</td>
+        </tr>
+        <tr>
+            <td>adequado</td>
+        </tr>
+
+        
+    </table>
+
+    <aside>
+        
+        <section id="hemocentros">
+            <h2>Hemocentros Próximos</h2>
+            <main>
+                <section>
+                    <h2>Escolha o Estado</h2>
+                    <form>
+                        <label for="estado">Estado:</label>
+                        <select id="estado" name="estado" onchange="showHemocentros()">
+                            <option value="">Selecione...</option>
+                            <option value="ac">Acre</option>
+                            <option value="al">Alagoas</option>
+                            <option value="ap">Amapá</option>
+                            <option value="am">Amazonas</option>
+                            <option value="ba">Bahia</option>
+                            <option value="ce">Ceará</option>
+                            <option value="df">Distrito Federal</option>
+                            <option value="es">Espírito Santo</option>
+                            <option value="go">Goiás</option>
+                            <option value="ma">Maranhão</option>
+                            <option value="mt">Mato Grosso</option>
+                            <option value="ms">Mato Grosso do Sul</option>
+                            <option value="mg">Minas Gerais</option>
+                            <option value="pa">Pará</option>
+                            <option value="pb">Paraíba</option>
+                            <option value="pr">Paraná</option>
+                            <option value="pe">Pernambuco</option>
+                            <option value="pi">Piauí</option>
+                            <option value="rj">Rio de Janeiro</option>
+                            <option value="rn">Rio Grande do Norte</option>
+                            <option value="rs">Rio Grande do Sul</option>
+                            <option value="ro">Rondônia</option>
+                            <option value="rr">Roraima</option>
+                            <option value="sc">Santa Catarina</option>
+                            <option value="sp">São Paulo</option>
+                            <option value="se">Sergipe</option>
+                            <option value="to">Tocantins</option>
+
+                        </select>
+                    
+                    
+                    </form>
+                </section>
+        
+                <section id="hemocentros">
+                    <h2>Hemocentros Disponíveis</h2>
+                    <ul id="listaHemocentros">
+                        <p> Aqui serão listados os hemocentros de acordo com o estado selecionado</p>
+                    </ul>
+                </section>
+            </main>        
+        </section>
+
+        <section id="como-doar">
+            <h2>Como Doar?</h2>
+            <p>Procurar um hemocentro mais próximo de você e fazer o preenchimento do questionário doador. Realizar a pré-triagem e triagem clínica. Caso esteja dentro dos requisitos <!---- link para: quem pode doar sangue---->, é realizado a coleta de 400ml a 470ml.A Doação dura cerca de uma hora e meia e é realizada em local planejado, para segurança do doador.</p>
+        </section>
+
+        <section id="tipos-doacao">
+            <h2>Tipos de Doação</h2>
+            <h3>Há diferentes tipos de doação que são realizados dependendo da necessidade de quem vai receber o sangue coletado.
+            </h3>
+            <ul>
+                <li><h3>Sangue Total</h3>
+                    <p>Coleta de sangue dos doadores voluntários.</p>
+                </li>
+                <li><h3>Plaquetas por Aférese</h3>
+                <p>Você pode doar parte do seu sangue por um processo diferente chamado aférese. Na aférese, através de uma agulha colocada na veia do braço do doador, o sangue é bombeado para o interior de um equipamento o qual irá separar parte das hemácias ou das plaquetas para doação. O equipamento irá reter apenas as células necessárias devolvendo para o doador as restantes. 
+                    A doação de plaquetas ajuda a muitas pessoas, principalmente as que sofrem de leucemia e outros tipos de câncer, inclusive crianças. A reposição que o organismo faz é rápida, em apenas 72 horas todas as células estão repostas.</p>    
+                </li>
+                <li><h3>Doação de Medula Óssea</h3>
+                <p>Na coleta de medula óssea, o procedimento ocorre em centro cirúrgico, sob anestesia peridural ou geral, e requer internação de 24 horas. As células serão coletadas através de punções na região pélvica posterior (osso do quadril) e dura cerca de 90 min.</p>
+
+                <p>Na doação por aférese, as células são coletadas diretamente da corrente sanguínea, através de um procedimento de aférese que dura cerca de 3 a 4 horas mas, neste caso, o doador deverá receber uma medicação por 5 dias para estimular as células-tronco.</p>
+                </li>
+            
+            </ul>
+        </section>
+
+        <section id="depoimentos">
+            <h2>Depoimentos</h2>
+            <p>Depoimentos inspiradores de doadores e receptores de sangue.</p>
+            <article>
+                <h3>Depoimento 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod nisi quis nisi commodo, nec lobortis enim convallis.</p>
+                <footer>Autor do Depoimento 1</footer>
+            </article>
+
+            <article>
+                <h3>Depoimento 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod nisi quis nisi commodo, nec lobortis enim convallis.</p>
+                <footer>Autor do Depoimento 2</footer>
+            </article>
+
+            <article>
+                <h3>Depoimento 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod nisi quis nisi commodo, nec lobortis enim convallis.</p>
+                <footer>Autor do Depoimento 3</footer>
+            </article>
+        </section>
+
+        <section id="campanhas">
+            <h2>Campanhas</h2> 
+            <p>Com o objetivo de ser educativa e motivacional, nossas campanhas têm como foco principal destacar a importância da doação de sangue. Elas incluem materiais para rádio, panfletos, banners, calendários temáticos, faixas, cartazes, além de mídias digitais e redes sociais, todos com o intuito de lembrar a importância vital da doação.</p>
+            <img src="./imagens/1semana-nacional-doador-de-sangue-2020.jpg">
+            <img src="./imagens/Americana-Osasco-e-Itaquá.png">
+            <img src="./imagens/Junho-vermelho.jpeg">
+            <img src="./imagens/whatsapp-image-2023-02-06-at-11.00.13.jpg">
+        </section>
+
+        
+    </aside>
+      
+
+    <footer>
+        <p>© 2024 Hemovida</p>
+    </footer>
+
+</body>
+</html>
