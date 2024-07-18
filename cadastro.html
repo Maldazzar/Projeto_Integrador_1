@@ -26,6 +26,81 @@
             <button type="submit">Buscar</button>
         </form>
     </main>
+
+    <form>
+        <h2>Cadastro Paciente</h2>
+        <div>
+          <label for="nomeCompleto">Nome:</label>
+          <input type="text" id="nomeCompleto" />
+        </div>
+        <div>
+          <label for="emailFornecido">Email:</label>
+          <input type="text" id="emailFornecido" />
+        </div>
+        <div>
+          <label for="numeroTelefone">Telefone:</label>
+          <input type="tel" id="numeroTelefone" placeholder="(XX) XXXXX-XXXX" />
+      </div>
+      <div>
+          <label for="TipoSangue">Informe seu Tipo Sanguíneo:</label>
+          <select id="tipoSangue">
+              <option value="a+">A+</option>
+              <option value="b+">B+</option>
+              <option value="ab+">AB+</option>
+              <option value="o+">O+</option>
+              <option value="a-">A-</option>
+              <option value="b-">B-</option>
+              <option value="ab-">AB-</option>
+              <option value="o-">O-</option>
+          </select>    
+        </div>
+        <div>
+          <label for="senhaSeguranca">Senha:</label>
+          <input type="password" id="senhaSeguranca" />
+        </div>
+        <button type="submit">Registrar</button>
+      </form>
+  
+      <form>
+        <h2>Cadastro Doador</h2>
+        <div>
+          <label for="nomeCompletoD">Nome:</label>
+          <input type="text" id="nomeCompletoD" />
+        </div>
+        <div>
+          <label for="emailFornecidoD">Email:</label>
+          <input type="text" id="emailFornecidoD" />
+        </div>
+        <div>
+          <label for="numeroTelefoneD">Telefone:</label>
+          <input type="tel" id="numeroTelefoneD" placeholder="(XX) XXXXX-XXXX" />
+      </div>
+      <div>
+          <label for="TipoSangueD">Informe seu Tipo Sanguíneo:</label>
+          <select id="TipoSangueD">
+              <option value="a+">A+</option>
+              <option value="b+">B+</option>
+              <option value="ab+">AB+</option>
+              <option value="o+">O+</option>
+              <option value="a-">A-</option>
+              <option value="b-">B-</option>
+              <option value="ab-">AB-</option>
+              <option value="o-">O-</option>
+          </select>    
+        </div>
+        <div>
+          <label for="doarMaisVezes">Teria a disponibilidade de doar mais vezes:</label>
+          <select id="doarMaisVezes">
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+          </select>    
+        </div>
+        <div>
+          <label for="senhaSegurancaD">Senha:</label>
+          <input type="password" id="senhaSegurancaD" />
+        </div>
+        <button type="submit">Registrar</button>
+      </form>
     
     <footer>
         <p>© 2024 Hemovida</p>
