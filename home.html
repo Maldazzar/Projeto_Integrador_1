@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Hemovida</title>
 </head>
 <body>
     <header>
@@ -13,20 +13,156 @@
     <nav>
         <ul>
             <li><a href="./home.html">Home</a></li>
-            <li><a href="./sobre.html">Sobre</a></li>
+            <li><a href="./sobre.html">Sobre Nós</a></li>
             <li><a href="./cadastro.html">Cadastro</a></li>
             <li><a href="./educacao.html">Educação</a></li>
             <li><a href="./contato.html">Contato</a></li>
         </ul>
     </nav>
+
+    <form>
+        <input type="text" placeholder="Digite aqui o que você procura">
+        <button type="submit">Buscar</button>
+    </form>
     
     <main>
-        <form>
-            <input type="text" placeholder="Digite aqui o que você procura">
-            <button type="submit">Buscar</button>
-        </form>
+        <section>
+            <h2>Estoque de Sangue Por Estado</h2>
+            <form>
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado" onchange="showHemocentros()">
+                    <option value="">Selecione...</option>
+                    <option value="ac">Acre</option>
+                    <option value="al">Alagoas</option>
+                    <option value="ap">Amapá</option>
+                    <option value="am">Amazonas</option>
+                    <option value="ba">Bahia</option>
+                    <option value="ce">Ceará</option>
+                    <option value="df">Distrito Federal</option>
+                    <option value="es">Espírito Santo</option>
+                    <option value="go">Goiás</option>
+                    <option value="ma">Maranhão</option>
+                    <option value="mt">Mato Grosso</option>
+                    <option value="ms">Mato Grosso do Sul</option>
+                    <option value="mg">Minas Gerais</option>
+                    <option value="pa">Pará</option>
+                    <option value="pb">Paraíba</option>
+                    <option value="pr">Paraná</option>
+                    <option value="pe">Pernambuco</option>
+                    <option value="pi">Piauí</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="rn">Rio Grande do Norte</option>
+                    <option value="rs">Rio Grande do Sul</option>
+                    <option value="ro">Rondônia</option>
+                    <option value="rr">Roraima</option>
+                    <option value="sc">Santa Catarina</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="se">Sergipe</option>
+                    <option value="to">Tocantins</option>
+                </select>
+            </form>
+        </section>
+        <table border="1">
+            <tr>
+                <td>baixo</td>
+                <td>A+</td>
+                <td>B+</td>
+                <td>B-</td>
+                <td>AB+</td>
+            </tr>
+            <tr>
+                <td>regular</td>
+                <td>AB-</td>
+                <td>O+</td>
+                <td>O-</td>
+            </tr>
+            <tr>
+                <td>adequado</td>
+            </tr>
+        </table>
+        
+        <aside>
+            <section id="hemocentros">
+                <h2>Hemocentros Próximos</h2>
+                <p>Escolha o Estado:</p>
+                <form>
+                    <select id="estado" name="estado" onchange="showHemocentros()">
+                        <option value="">Selecione...</option>
+                        <option value="ac">Acre</option>
+                        <option value="al">Alagoas</option>
+                        <option value="ap">Amapá</option>
+                        <option value="am">Amazonas</option>
+                        <option value="ba">Bahia</option>
+                        <option value="ce">Ceará</option>
+                        <option value="df">Distrito Federal</option>
+                        <option value="es">Espírito Santo</option>
+                        <option value="go">Goiás</option>
+                        <option value="ma">Maranhão</option>
+                        <option value="mt">Mato Grosso</option>
+                        <option value="ms">Mato Grosso do Sul</option>
+                        <option value="mg">Minas Gerais</option>
+                        <option value="pa">Pará</option>
+                        <option value="pb">Paraíba</option>
+                        <option value="pr">Paraná</option>
+                        <option value="pe">Pernambuco</option>
+                        <option value="pi">Piauí</option>
+                        <option value="rj">Rio de Janeiro</option>
+                        <option value="rn">Rio Grande do Norte</option>
+                        <option value="rs">Rio Grande do Sul</option>
+                        <option value="ro">Rondônia</option>
+                        <option value="rr">Roraima</option>
+                        <option value="sc">Santa Catarina</option>
+                        <option value="sp">São Paulo</option>
+                        <option value="se">Sergipe</option>
+                        <option value="to">Tocantins</option>
+                    </select>
+                </form>
+                    <h2>Hemocentros Disponíveis</h2>
+                    <ul id="listaHemocentros">
+                        <p>Aqui serão listados os hemocentros de acordo com o estado selecionado</p>
+                    </ul>
+            </section>
+            <section id="como-doar">
+                <h2>Como Doar?</h2>
+                <p>Procurar um hemocentro mais próximo de você e fazer o preenchimento do questionário doador.</p>
+            </section>
+            <section id="tipos-doacao">
+                <h2>Tipos de Doação</h2>
+                <ul>
+                    <li><h3>Sangue Total</h3><p>Coleta de sangue dos doadores voluntários.</p></li>
+                    <li><h3>Plaquetas por Aférese</h3><p>Você pode doar parte do seu sangue por um processo diferente chamado aférese.</p></li>
+                    <li><h3>Doação de Medula Óssea</h3><p>Na coleta de medula óssea, o procedimento ocorre em centro cirúrgico.</p></li>
+                </ul>
+            </section>
+            <section id="depoimentos">
+                <h2>Depoimentos</h2>
+                <article>
+                    <h3>Depoimento 1</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <footer>Autor do Depoimento 1</footer>
+                </article>
+                <article>
+                    <h3>Depoimento 2</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <footer>Autor do Depoimento 2</footer>
+                </article>
+                <article>
+                    <h3>Depoimento 3</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <footer>Autor do Depoimento 3</footer>
+                </article>
+            </section> 
+            <section id="campanhas">
+                <h2>Campanhas</h2>
+                <p>Nossas campanhas destacam a importância da doação de sangue.</p>
+                <img src="./imagens/1semana-nacional-doador-de-sangue-2020.jpg" alt="Campanha 1">
+                <img src="./imagens/Americana-Osasco-e-Itaquá.png" alt="Campanha 2">
+                <img src="./imagens/Junho-vermelho.jpeg" alt="Campanha 3">
+                <img src="./imagens/whatsapp-image-2023-02-06-at-11.00.13.jpg" alt="Campanha 4">
+            </section>
+        </aside>
     </main>
-    
+
     <footer>
         <p>© 2024 Hemovida</p>
     </footer>
