@@ -1,109 +1,120 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Cadastro - Hemovida</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Hemovida</h1>
-    </header>
-    
-    <nav>
+  <header>
+
+    <h1>Hemovida</h1>
+
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <nav class="nav">
         <ul>
-            <li><a href="./home.html">Home</a></li>
-            <li><a href="./sobre.html">Sobre</a></li>
-            <li><a href="./cadastro.html">Cadastro</a></li>
-            <li><a href="./educacao.html">Educação</a></li>
-            <li><a href="./contato.html">Contato</a></li>
+            <li><a href="./home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="./sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+            <li><a href="./cadastro.html"><i class="fas fa-user"></i> Cadastro</a></li>
+            <li><a href="./educacao.html"><i class="fas fa-graduation-cap"></i> Educação</a></li>
+            <li><a href="./contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
         </ul>
     </nav>
     
+</header>
+
     <main>
-        <form>
+        <form class="busca-form">
             <input type="text" placeholder="Digite aqui o que você procura">
-            <button type="submit">Buscar</button>
+            <button type="submit"><i class="fas fa-search"></i> Buscar</button>
+        </form>
+
+        <form class="cadastro-form">
+            <h2>Cadastro Paciente</h2>
+            <div>
+                <label for="nomeCompleto"><i class="fas fa-user"></i> Nome:</label>
+                <input type="text" id="nomeCompleto" />
+            </div>
+            <div>
+                <label for="emailFornecido"><i class="fas fa-envelope"></i> Email:</label>
+                <input type="text" id="emailFornecido" />
+            </div>
+            <div>
+                <label for="numeroTelefone"><i class="fas fa-phone"></i> Telefone:</label>
+                <input type="tel" id="numeroTelefone" placeholder="(XX) XXXXX-XXXX" />
+            </div>
+            <div>
+                <label for="TipoSangue"><i class="fas fa-heart"></i> Informe seu Tipo Sanguíneo:</label>
+                <select id="tipoSangue">
+                    <option value="a+">A+</option>
+                    <option value="b+">B+</option>
+                    <option value="ab+">AB+</option>
+                    <option value="o+">O+</option>
+                    <option value="a-">A-</option>
+                    <option value="b-">B-</option>
+                    <option value="ab-">AB-</option>
+                    <option value="o-">O-</option>
+                </select>    
+            </div>
+            <div>
+                <label for="senhaSeguranca"><i class="fas fa-lock"></i> Senha:</label>
+                <input type="password" id="senhaSeguranca" />
+            </div>
+            <button type="submit"><i class="fas fa-user-plus"></i> Registrar</button>
+        </form>
+
+        <form class="cadastro-form">
+            <h2>Cadastro Doador</h2>
+            <div>
+                <label for="nomeCompletoD"><i class="fas fa-user"></i> Nome:</label>
+                <input type="text" id="nomeCompletoD" />
+            </div>
+            <div>
+                <label for="emailFornecidoD"><i class="fas fa-envelope"></i> Email:</label>
+                <input type="text" id="emailFornecidoD" />
+            </div>
+            <div>
+                <label for="numeroTelefoneD"><i class="fas fa-phone"></i> Telefone:</label>
+                <input type="tel" id="numeroTelefoneD" placeholder="(XX) XXXXX-XXXX" />
+            </div>
+            <div>
+                <label for="TipoSangueD"><i class="fas fa-heart"></i> Informe seu Tipo Sanguíneo:</label>
+                <select id="TipoSangueD">
+                    <option value="a+">A+</option>
+                    <option value="b+">B+</option>
+                    <option value="ab+">AB+</option>
+                    <option value="o+">O+</option>
+                    <option value="a-">A-</option>
+                    <option value="b-">B-</option>
+                    <option value="ab-">AB-</option>
+                    <option value="o-">O-</option>
+                </select>    
+            </div>
+            <div>
+                <label for="doarMaisVezes"><i class="fas fa-clock"></i> Teria a disponibilidade de doar mais vezes:</label>
+                <select id="doarMaisVezes">
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>    
+            </div>
+            <div>
+                <label for="senhaSegurancaD"><i class="fas fa-lock"></i> Senha:</label>
+                <input type="password" id="senhaSegurancaD" />
+            </div>
+            <button type="submit"><i class="fas fa-user-plus"></i> Registrar</button>
         </form>
     </main>
 
-    <form>
-        <h2>Cadastro Paciente</h2>
-        <div>
-          <label for="nomeCompleto">Nome:</label>
-          <input type="text" id="nomeCompleto" />
-        </div>
-        <div>
-          <label for="emailFornecido">Email:</label>
-          <input type="text" id="emailFornecido" />
-        </div>
-        <div>
-          <label for="numeroTelefone">Telefone:</label>
-          <input type="tel" id="numeroTelefone" placeholder="(XX) XXXXX-XXXX" />
-      </div>
-      <div>
-          <label for="TipoSangue">Informe seu Tipo Sanguíneo:</label>
-          <select id="tipoSangue">
-              <option value="a+">A+</option>
-              <option value="b+">B+</option>
-              <option value="ab+">AB+</option>
-              <option value="o+">O+</option>
-              <option value="a-">A-</option>
-              <option value="b-">B-</option>
-              <option value="ab-">AB-</option>
-              <option value="o-">O-</option>
-          </select>    
-        </div>
-        <div>
-          <label for="senhaSeguranca">Senha:</label>
-          <input type="password" id="senhaSeguranca" />
-        </div>
-        <button type="submit">Registrar</button>
-      </form>
-  
-      <form>
-        <h2>Cadastro Doador</h2>
-        <div>
-          <label for="nomeCompletoD">Nome:</label>
-          <input type="text" id="nomeCompletoD" />
-        </div>
-        <div>
-          <label for="emailFornecidoD">Email:</label>
-          <input type="text" id="emailFornecidoD" />
-        </div>
-        <div>
-          <label for="numeroTelefoneD">Telefone:</label>
-          <input type="tel" id="numeroTelefoneD" placeholder="(XX) XXXXX-XXXX" />
-      </div>
-      <div>
-          <label for="TipoSangueD">Informe seu Tipo Sanguíneo:</label>
-          <select id="TipoSangueD">
-              <option value="a+">A+</option>
-              <option value="b+">B+</option>
-              <option value="ab+">AB+</option>
-              <option value="o+">O+</option>
-              <option value="a-">A-</option>
-              <option value="b-">B-</option>
-              <option value="ab-">AB-</option>
-              <option value="o-">O-</option>
-          </select>    
-        </div>
-        <div>
-          <label for="doarMaisVezes">Teria a disponibilidade de doar mais vezes:</label>
-          <select id="doarMaisVezes">
-              <option value="sim">Sim</option>
-              <option value="nao">Não</option>
-          </select>    
-        </div>
-        <div>
-          <label for="senhaSegurancaD">Senha:</label>
-          <input type="password" id="senhaSegurancaD" />
-        </div>
-        <button type="submit">Registrar</button>
-      </form>
-    
     <footer>
         <p>© 2024 Hemovida</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

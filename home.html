@@ -3,22 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Hemovida</title>
 </head>
 <body>
+
     <header>
+
         <h1>Hemovida</h1>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="./home.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="./sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                <li><a href="./cadastro.html"><i class="fas fa-user"></i> Cadastro</a></li>
+                <li><a href="./educacao.html"><i class="fas fa-graduation-cap"></i> Educação</a></li>
+                <li><a href="./contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+            </ul>
+        </nav>
+        
     </header>
-    
-    <nav>
-        <ul>
-            <li><a href="./home.html">Home</a></li>
-            <li><a href="./sobre.html">Sobre</a></li>
-            <li><a href="./cadastro.html">Cadastro</a></li>
-            <li><a href="./educacao.html">Educação</a></li>
-            <li><a href="./contato.html">Contato</a></li>
-        </ul>
-    </nav>
 
     <form>
         <input type="text" placeholder="Digite aqui o que você procura">
@@ -155,16 +167,33 @@
             <section id="campanhas">
                 <h2>Campanhas</h2>
                 <p>Nossas campanhas destacam a importância da doação de sangue.</p>
-                <img src="./imagens/1semana-nacional-doador-de-sangue-2020.jpg" alt="Campanha 1">
-                <img src="./imagens/Americana-Osasco-e-Itaquá.png" alt="Campanha 2">
-                <img src="./imagens/Junho-vermelho.jpeg" alt="Campanha 3">
-                <img src="./imagens/whatsapp-image-2023-02-06-at-11.00.13.jpg" alt="Campanha 4">
+                <div class="campanhas-container">
+                    <div class="campanha">
+                        <img src="./imagens/1semana-nacional-doador-de-sangue-2020.jpg" alt="Campanha 1">
+                        <p>Semana Nacional do Doador de Sangue</p>
+                    </div>
+                    <div class="campanha">
+                        <img src="./imagens/Americana-Osasco-e-Itaquá.png" alt="Campanha 2">
+                        <p>Americana, Osasco e Itaquá</p>
+                    </div>
+                    <div class="campanha">
+                        <img src="./imagens/Junho-vermelho.jpeg" alt="Campanha 3">
+                        <p>Junho Vermelho</p>
+                    </div>
+                    <div class="campanha">
+                        <img src="./imagens/whatsapp-image-2023-02-06-at-11.00.13.jpg" alt="Campanha 4">
+                        <p>Campanha WhatsApp</p>
+                    </div>
+                </div>
             </section>
+            
         </aside>
     </main>
 
     <footer>
         <p>© 2024 Hemovida</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
