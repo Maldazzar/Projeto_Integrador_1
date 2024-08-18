@@ -1,0 +1,450 @@
+/* Estilos globais */
+ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: auto;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(211, 207, 207, 0.5);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do cabeçalho */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #b90500;
+    font-weight: 700;
+    font-size: 18px;
+    white-space: nowrap;
+    padding: 10px 0;
+    display: inline-block;
+    position: relative;
+}
+
+.link::before,
+.link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #80c0c0;
+    transform: scaleX(0);
+    transition: transform 0.25s;
+}
+
+.link::before {
+    top: -3px;
+    transform-origin: left;
+}
+
+.link::after {
+    bottom: -3px;
+    transform-origin: right;
+}
+
+.link:hover::before,
+.link:hover::after,
+.active::before,
+.active::after {
+    transform: scaleX(1);
+}
+
+.nav-list a:hover {
+    color: #80c0c0;
+    background-color: transparent;
+}
+
+/* Estilo do formulário de busca */
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.search-form input {
+    padding: 2px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-form button {
+    padding: 2px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #b90500;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-form button:hover {
+    background-color: #a00400;
+}
+
+main {
+    padding-top: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+/* Estilo da seção Educação */
+#educacao {
+    position: relative;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+#educacao::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(imagens/AdobeStock_738507013_Preview.png);
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    z-index: -1;
+}
+
+#educacao .text-overlay {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    padding: 15px;
+    border-radius: 8px;
+
+}
+
+
+#educacao h2 {
+    position: relative;
+    font-size: 35px;
+    color: #b90500;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #b90500;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+#educacao h3 {
+    position: relative;
+    font-size: 24px;
+    color: #b90500;
+    margin: 20px 0 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 300;
+}
+
+#educacao p {
+    color: #0c0b0b;
+    line-height: 1.6;
+    font-family: 'Pontano Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Estilo da seção Infográficos */
+#infograficos {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+}
+
+#infograficos h2 {
+    font-size: 35px;
+    color: #b90500;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #b90500;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+#infograficos p {
+    color: #0c0b0b;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Estilo dos cards de infográficos */
+.infografico-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Estilo geral dos cards de infográficos */
+.infografico-card {
+    position: relative;
+    background-image: linear-gradient(-250deg, #9e281d, rgba(235, 231, 225, 0.7) 70%);
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(185, 37, 37, 0.87);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+    cursor: pointer;
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    border-bottom: 10px solid rgba(185, 37, 37, 0.87)
+}
+
+/* Efeito de hover para o card */
+.infografico-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}   
+
+/* Estilo da imagem dentro do card */
+.infografico-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Estilo do conteúdo do card */
+.infografico-content {
+    padding: 10px;
+    /* Padding reduzido */
+    background-image: linear-gradient(-250deg, #8a2118 168, 42, 45, 0.747);
+}
+
+/* Estilo do título dentro do card */
+.infografico-content h3 {
+    font-size: 16px;
+    /* Tamanho da fonte menor */
+    color: #b90500;
+    margin-bottom: 5px;
+    /* Menos espaço abaixo do título */
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Estilo da descrição dentro do card */
+.infografico-content p {
+    color: #0c0b0b;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* Efeito de sobreposição do conteúdo do card */
+.infografico-card:hover .infografico-content {
+    background-color: rgba(168, 42, 42, 0.747);
+}
+
+.infografico-card:hover .infografico-content h3 {
+    color: #fff;
+    font-size: 20px;
+}
+
+.infografico-card:hover .infografico-content p {
+    color: #f9f9f9 !important
+}
+
+/* Container dos cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* Estilos dos cards */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(185, 37, 37, 0.87);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 250px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagem do card */
+.card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.card:hover .card-img {
+    transform: scale(1.1);
+}
+
+/* Conteúdo do card */
+.card-content {
+    padding: 20px;
+    background-color: #b90500;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo da seção Campanhas */
+#campanhas {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+#campanhas h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    color: #b90500;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #b90500;
+}
+
+#campanhas p {
+    color: #0c0b0b;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+#campanhas img.img-fluid {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#campanhas h3 {
+
+    text-align: justify;
+    font-size: 16px;
+    word-wrap: break-word;
+
+
+}
+
+/* Estilo do rodapé */
+footer {
+    background: rgb(211,207,207);
+    background: linear-gradient(180deg, rgba(211,207,207,1) 2%, rgba(209,179,178,1) 10%, rgba(205,140,137,1) 20%, rgba(212,94,94,1) 32%, rgba(198,57,52,1) 49%, rgba(194,30,25,1) 72%, rgba(185,5,0,1) 91%); 
+    color: #fff; 
+    text-align: center; 
+    padding: 20px; 
+    width: 97%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+footer p {
+    margin: 0; 
+    font-size: 22; 
+    font-family: 'Bebas Neue', sans-serif; 
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav ul.show {
+        display: flex;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    form input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    form button[type="submit"] {
+        width: 100%;
+        border-radius: 5px;
+    }
+}
