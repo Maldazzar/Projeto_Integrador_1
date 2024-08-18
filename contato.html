@@ -1,96 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Hemovida</title>
 </head>
 <body>
+
     <header>
-     <h1>Hemovida</h1>
+
+        <h1>Hemovida</h1>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="./home.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="./sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                <li><a href="./cadastro.html"><i class="fas fa-user"></i> Cadastro</a></li>
+                <li><a href="./educacao.html"><i class="fas fa-graduation-cap"></i> Educação</a></li>
+                <li><a href="./contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+            </ul>
+        </nav>
+        
     </header>
     
-<main>
-    <section>
-        <nav>
-            <ul>
-                <li>
-                    <a href="./home.html">
-                        Home
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </section>
-</main>
+    <main>
+        <form>
+            <input type="text" placeholder="Digite aqui o que você procura">
+            <button type="submit">Buscar</button>
+        </form>
+    </main>
 
-<main>
-    <section>
-        <nav>
-            <ul>
-                <li>
-                    <a href="./sobre.html">
-                        Sobre
-                    </a>
-                
-                </li>
-            </ul>
-        </nav>
-    </section>
-</main>
+    <div>
+        <h3>Contato</h3>
 
-<main>
-    <section>
-        <nav>
-            <ul>
-                <li>
-                    <a href="./cadastro.html">
-                        Cadastro
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </section>
-</main>
+        <form action="" method="post">
+            <div>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" placeholder="nome">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="seuemail@seuemail.com.br">
+            </div>
+            <div>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Digite a sua dúvida, reclamação ou sugestão."></textarea>
+            </div>
+
+            <button type="submit">Enviar</button>
+
+        </form>
+    </div>
     
-<main>
-    <section>
-        <nav>
-            <ul>
-                <li>
-                    <a href="./educação.html">
-                        Educação
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </section>
-</main>
-
-<main>
-    <section>
-        <nav>
-            <ul>
-                <li>
-                    <a href="./contato.html">
-                        Contato
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </section>
-</main>
-
-<body>
-    <form>
-        <input type="text" placeholder="Digite aqui o que você procura">
-        <button type="submit">Buscar</button>
-    </form>
-</body>
-
-<body>
     <footer>
         <p>© 2024 Hemovida</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
