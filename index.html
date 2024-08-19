@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Hemovida</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Fjalla+One&family=Pontano+Sans:wght@300..700&family=Roboto&family=Sedan:ital@0;1&display=swap" rel="stylesheet"></head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./imagens/Logo_Branco.webp" alt="logo">
+        </div>
+
+        <div class="header-container">
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="./home.html" class="link">Home</a></li>
+                    <li><a href="./sobre.html" class="link">Sobre Nós</a></li>
+                    <li><a href="./cadastro.html" class="link">Cadastros</a></li>
+                    <li><a href="./educacao.html" class="link">Educação</a></li>
+                    <li><a href="./contato.html" class="link">Contato</a></li>
+                </ul>
+            </nav>
+            <form class="search-form">
+                <input type="text" placeholder="Digite aqui o que você procura">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </header>
+
+
+
+    <main>
+        <section>
+            <h2>Estoque de Sangue Por Estado</h2>
+            <p>Escolha o Estado desejado:</p>
+
+            <form class="form-estilo">
+                <label for="estado" class="form-label">Estado:</label>
+                <select id="estado" name="estado" class="form-select" onchange="showHemocentros()">
+                    <option value="">Selecione...</option>
+                    <option value="ac">Acre</option>
+                    <option value="al">Alagoas</option>
+                    <option value="ap">Amapá</option>
+                    <option value="am">Amazonas</option>
+                    <option value="ba">Bahia</option>
+                    <option value="ce">Ceará</option>
+                    <option value="df">Distrito Federal</option>
+                    <option value="es">Espírito Santo</option>
+                    <option value="go">Goiás</option>
+                    <option value="ma">Maranhão</option>
+                    <option value="mt">Mato Grosso</option>
+                    <option value="ms">Mato Grosso do Sul</option>
+                    <option value="mg">Minas Gerais</option>
+                    <option value="pa">Pará</option>
+                    <option value="pb">Paraíba</option>
+                    <option value="pr">Paraná</option>
+                    <option value="pe">Pernambuco</option>
+                    <option value="pi">Piauí</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="rn">Rio Grande do Norte</option>
+                    <option value="rs">Rio Grande do Sul</option>
+                    <option value="ro">Rondônia</option>
+                    <option value="rr">Roraima</option>
+                    <option value="sc">Santa Catarina</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="se">Sergipe</option>
+                    <option value="to">Tocantins</option>
+                </select>
+            </form>
+
+        <div  class="table-container">
+            <div class="table-box">
+                <h2 class="table-title">Banco de Sangue</h2>
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Nivel</th>
+                            <th class="tipo">A +</th>
+                            <th class="tipo">A -</th>
+                            <th class="tipo">B +</th>
+                            <th class="tipo">B -</th>
+                            <th class="tipo">AB +</th>
+                            <th class="tipo">AB -</th>
+                            <th class="tipo">O +</th>
+                            <th class="tipo">O -</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                           <td class="highlight-good">BOM</td>
+                           <td>BOM</td>
+                           <td>-</td>
+                           <td>-</td>
+                           <td>BOM</td>
+                           <td>-</td>
+                           <td>BOM</td>
+                           <td>-</td>
+                           <td>-</td>
+                        </tr>
+                        <tr>
+                           <td class="highlight-medium">MEDIO</td>
+                           <td>-</td>
+                           <td>-</td>
+                           <td>MEDIO</td>
+                           <td>-</td>
+                           <td>MEDIO</td>
+                           <td>-</td>
+                           <td>-</td>
+                           <td>-</td>
+                        </tr>
+                        <tr>
+                           <td class="highlight-low">BAIXO</td>
+                           <td>-</td>
+                           <td>BAIXO</td>
+                           <td>-</td>
+                           <td>-</td>
+                           <td>-</td>
+                           <td>-</td>
+                           <td>BAIXO</td>
+                           <td>BAIXO</td>
+                        </tr>
+                
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        </div>
+
+
+        <section>
+            <h2>Hemocentro mais próximo</h2>
+            <p>Escolha o Estado desejado:</p>
+
+            <form class="form-estilo">
+                <label for="estado" class="form-label">Estado:</label>
+                <select id="estado" name="estado" class="form-select" onchange="showHemocentros()">
+                    <option value="">Selecione...</option>
+                    <option value="ac">Acre</option>
+                    <option value="al">Alagoas</option>
+                    <option value="ap">Amapá</option>
+                    <option value="am">Amazonas</option>
+                    <option value="ba">Bahia</option>
+                    <option value="ce">Ceará</option>
+                    <option value="df">Distrito Federal</option>
+                    <option value="es">Espírito Santo</option>
+                    <option value="go">Goiás</option>
+                    <option value="ma">Maranhão</option>
+                    <option value="mt">Mato Grosso</option>
+                    <option value="ms">Mato Grosso do Sul</option>
+                    <option value="mg">Minas Gerais</option>
+                    <option value="pa">Pará</option>
+                    <option value="pb">Paraíba</option>
+                    <option value="pr">Paraná</option>
+                    <option value="pe">Pernambuco</option>
+                    <option value="pi">Piauí</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="rn">Rio Grande do Norte</option>
+                    <option value="rs">Rio Grande do Sul</option>
+                    <option value="ro">Rondônia</option>
+                    <option value="rr">Roraima</option>
+                    <option value="sc">Santa Catarina</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="se">Sergipe</option>
+                    <option value="to">Tocantins</option>
+                </select>
+            </form>
+
+            <h2>Hemocentros Disponíveis</h2>
+            <ul id="listaHemocentros2">
+                <p>Aqui serão listados os hemocentros de acordo com o estado selecionado</p>
+            </ul>
+        </section>
+
+
+        <section class="tipos-doacao">
+            <h2>Tipos de Doação</h2>
+            <p>Existem diferentes formas de contribuir para a saúde e bem-estar dos pacientes. Conheça os tipos de doação disponíveis:</p>
+            <ul>
+                <li>
+                    <h3>Sangue Total</h3>
+                    <p>A coleta é feita diretamente do doador, fornecendo uma unidade de sangue completo para uso geral.</p>
+                </li>
+                <li>
+                    <h3>Plaquetas por Aférese</h3>
+                    <p> Um processo especializado que coleta apenas as plaquetas do sangue, utilizando um equipamento chamado aférese.</p>
+                </li>
+                <li>
+                    <h3>Doação de Medula Óssea</h3> 
+                    <p>Envolve a coleta de medula óssea em um centro cirúrgico para tratamentos específicos, oferecendo uma chance vital para pacientes com doenças graves.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="depoimentos">
+            <h2 class="depoimentos-titulo">DEPOIMENTOS</h2>
+            <div class="depoimentos-container">
+                <!-- Primeiro depoimento -->
+                <div class="depo-box">
+                    <div class="user">
+                        <img class="img-responsive" src="./imagens/doador1.webp" alt="Riselle S Pereira">
+                    </div>
+                    <h3>Riselle S. Pereira</h3>
+                    <span class="position">Doadora</span>
+                    <div class="depoimento-texto">
+                    <p>"Sou doadora de sangue há 10 anos aqui em Pernambuco, e essa jornada tem sido uma das mais gratificantes da minha vida. A primeira vez que doei foi por acaso, um amigo estava precisando e fui incentivada a ajudar. Desde então, continuo doando regularmente, e é sempre um sentimento incrível saber que estou ajudando a salvar vidas. A equipe de atendimento é maravilhosa e sempre me faz sentir bem-vinda e confortável. A doação de sangue é um pequeno gesto que pode fazer uma grande diferença, e eu encorajo todos a se tornarem doadores. Vale a pena!"</p>
+                    </div>
+                </div>
+        
+                <!-- Segundo depoimento -->
+                <div class="depo-box">
+                    <div class="user">
+                        <img class="img-responsive" src="./imagens/doador2.jpg" alt="João P.Silva">
+                    </div>
+                    <h3>João P. Silva</h3>
+                    <span class="position">Receptor</span>
+                    <div class="depoimento-texto">
+                    <p>João precisou de uma doação de sangue para um procedimento médico urgente. O processo foi conduzido de maneira rápida e eficaz, e a doação foi crucial para sua recuperação. Ele é eternamente grato a todos os doadores que possibilitaram essa cirurgia. Cada doação é um ato de solidariedade que transforma vidas.</p>
+                    </div>
+                </div>
+        
+                <!-- Terceiro depoimento -->
+                <div class="depo-box">
+                    <div class="user">
+                        <img class="img-responsive" src="./imagens/doador3.jpg" alt="Tadeu José">
+                    </div>
+                    <h3>Tadeu José</h3>
+                    <span class="position">Doador</span>
+                    <div class="depoimento-texto">
+                    <p>"Minha primeira doação de sangue foi um marco importante para mim. Confesso que tive um pouco de receio, mas a vontade de ajudar falou mais alto. Ao ver o quão simples e rápido foi todo o processo, fiquei surpreso e satisfeito. Foi uma sensação incrível saber que, com esse pequeno gesto, eu poderia fazer a diferença na vida de alguém. Saí de lá com o coração leve e com a certeza de que voltarei mais vezes para doar"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>© 2024 Hemovida</p>
+        </footer>
+</body>
+
+</html>
