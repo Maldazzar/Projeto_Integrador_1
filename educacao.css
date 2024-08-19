@@ -31,7 +31,10 @@ header {
     background: rgba(0, 0, 0, 0.7);
     z-index: 1000;
 }
-
+.logo img {
+    height: 70px; /* Ajuste o tamanho da logo */
+    width: auto;
+}
 .header-container {
     display: flex;
     align-items: center;
@@ -46,7 +49,7 @@ header {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 60px;
+    gap: 40px;
     padding: 0;
     margin: 0;
 }
@@ -67,6 +70,7 @@ header {
     padding: 10px 0;
     display: inline-block;
     position: relative;
+    margin-left: 40px;
 }
 
 .link::before,
