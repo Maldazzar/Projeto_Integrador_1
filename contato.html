@@ -3,43 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-
-    <!-- Font Awesome para ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Hemovida</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Fjalla+One&family=Pontano+Sans:wght@300..700&family=Roboto&family=Sedan:ital@0;1&display=swap" rel="stylesheet"></head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
 
     <header>
-
-        <h1>Hemovida</h1>
-
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+        <div class="logo">
+            <img src="./imagens/Logo_Branco.webp" alt="logo">
         </div>
-        <nav class="nav">
-            <ul>
-                <li><a href="./home.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="./sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
-                <li><a href="./cadastro.html"><i class="fas fa-user"></i> Cadastro</a></li>
-                <li><a href="./educacao.html"><i class="fas fa-graduation-cap"></i> Educação</a></li>
-                <li><a href="./contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
-            </ul>
-        </nav>
-        
+
+        <div class="header-container">
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="./home.html" class="link">Home</a></li>
+                    <li><a href="./sobre.html" class="link">Sobre Nós</a></li>
+                    <li><a href="./cadastro.html" class="link">Cadastros</a></li>
+                    <li><a href="./educacao.html" class="link">Educação</a></li>
+                    <li><a href="./contato.html" class="link">Contato</a></li>
+                </ul>
+            </nav>
+            <form class="search-form">
+                <input type="text" placeholder="Digite aqui o que você procura">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
     </header>
     
+<!--
     <main>
         <form>
             <input type="text" placeholder="Digite aqui o que você procura">
             <button type="submit">Buscar</button>
         </form>
     </main>
-
-    <div>
+-->
+    <div id="form-contact">
         <h3>Contato</h3>
 
         <form action="" method="post">
@@ -62,6 +68,11 @@
     </div>
     
     <footer>
+        <div id="social-media">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
+        </div>
         <p>© 2024 Hemovida</p>
     </footer>
 
