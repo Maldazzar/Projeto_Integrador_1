@@ -320,3 +320,26 @@ form select {
         padding: 10px 15px;
     }
 }
+
+
+/* Footer social midia */
+
+li {
+    list-style-type: none;
+}
+
+.social-icons {
+    display: flex; /* Organiza os elementos em linha */
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+}
+  
+.social-icons a {
+    color: rgb(221, 13, 13); /* Define a cor dos ícones como branco */
+    margin: 0 10px; /* Adiciona um espaçamento entre os ícones */
+}
+
+
+.social-icons a:hover {
+    color: #333; /* Cor dos ícones ao passar o mouse */
+    transform: scale(1.2); /* Aumenta o tamanho dos ícones ao passar o mouse */
+}
