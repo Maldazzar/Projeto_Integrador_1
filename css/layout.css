@@ -1,10 +1,120 @@
+/* ORDEM DOS ESTILOS:
+1 - TAGS (ELEMENTOS) 
+2 - CLASSES
+3 - IDs */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f5fcff; /* Cor de fundo geral */
+    background-color: #f5fcff;
     line-height: 1.6;
     overflow-y: scroll;
     width: 100%;
+}
+
+header {
+    background-color: #C2141A;
+    color: #f5fcff;
+    display: flex;
+    padding: 10px 20px;
+}
+
+/* ELEMENTOS DEFINIDOS POR CLASSES */
+
+.htitle {
+    align-self: center;
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+}
+
+.nav {
+    margin: 0;
+    display: flex;
+    justify-content: right;
+}
+
+.nav-bar {
+    display:flex;
+    flex: 2;
+    flex-direction: column;
+    align-items: right;
+    margin: auto;
+}
+
+.nav ul {
+    list-style-type: none;
+    gap: 15px;
+    padding: 0;
+    margin: 0 20px 0 0;
+    display: flex;
+}
+.nav ul li {
+    padding: 15px 20px;
+}
+.nav ul li a {
+    color: #fff;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+.nav ul li a:hover {
+    background-color: #720202;
+}
+.menu-toggle {
+    display: none; /* Oculta o ícone de menu em telas maiores */
+}
+
+.social-icons {
+    display: flex; /* Organiza os elementos em linha */
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    padding: 0;
+}
+  
+.social-icons a {
+    color: rgb(221, 13, 13);
+    margin: 0 10px; /* Adiciona um espaçamento entre os ícones */
+}
+
+.social-icons a:hover {
+    color: #333; /* Cor dos ícones ao passar o mouse */
+}
+
+.social-li {
+    list-style-type: none;
+}
+
+/* ELEMENTOS DEFINIDOS POR IDs */
+
+#inputSearch{
+    width: 550px;
+}
+
+#link-logo {    
+    background-image:url('imagens/logo.png');
+    background-size: cover;
+    color: #91cee8;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#link-logo:hover {
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+#logo_title {
+    background-repeat:no-repeat;
+    background-size: contain;
+    display: flex;
+    flex:1;
+}
+
+#navSearch {
+    text-align: right;
+    margin: 0;
+    padding: 0;
 }
