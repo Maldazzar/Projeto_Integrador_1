@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/layout.css">
     <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <title>Cadastro - Hemovida</title>
@@ -50,10 +49,12 @@
             <div>
                 <label for="nomeCompleto"><i class="fas fa-user"></i> Nome:</label>
                 <input type="text" id="nomeCompleto" />
+                <span id="nomeCompleto-helper" class="helper"></span>
             </div>
             <div>
                 <label for="emailFornecido"><i class="fas fa-envelope"></i> Email:</label>
                 <input type="text" id="emailFornecido" />
+                <span id="emailFornecido-helper" class="helper"></span> 
             </div>
             <div>
                 <label for="numeroTelefone"><i class="fas fa-phone"></i> Telefone:</label>
@@ -83,10 +84,12 @@
             <div>
                 <label for="nomeCompletoD"><i class="fas fa-user"></i> Nome:</label>
                 <input type="text" id="nomeCompletoD" />
+                <span id="nomeCompletoD-helper" class="helper"></span>
             </div>
             <div>
                 <label for="emailFornecidoD"><i class="fas fa-envelope"></i> Email:</label>
                 <input type="text" id="emailFornecidoD" />
+                <span id="emailFornecidoD-helper" class="helper"></span> 
             </div>
             <div>
                 <label for="numeroTelefoneD"><i class="fas fa-phone"></i> Telefone:</label>
@@ -130,6 +133,6 @@
         </ul>
     </footer>
     <!-- FIM DO RODAPÉ DA PÁGINA-->
-    <script src="js/script.js"></script>
+    <script src="js\cadastroValidation.js" defer></script>
 </body>
 </html>
