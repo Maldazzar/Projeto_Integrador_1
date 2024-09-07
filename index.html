@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Fjalla+One&family=Pontano+Sans:wght@300..700&family=Roboto&family=Sedan:ital@0;1&display=swap" rel="stylesheet"></head>
-
+  
 <body>
     <header>
         <div class="logo">
@@ -32,6 +32,7 @@
                 <input type="text" placeholder="Digite aqui o que você procura">
                 <button type="submit">Buscar</button>
             </form>
+            <button class="login-button">Login</button>
         </div>
     </header>
 
@@ -74,7 +75,7 @@
             </form>
 
         <div  class="table-container">
-            <div class="table-box">
+            <div class="table-box" id ="estadoTabela">
                 <h2 class="table-title">Banco de Sangue</h2>
                 <table>
 
@@ -91,46 +92,15 @@
                             <th class="tipo">O -</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                           <td class="highlight-good">BOM</td>
-                           <td>BOM</td>
-                           <td>-</td>
-                           <td>-</td>
-                           <td>BOM</td>
-                           <td>-</td>
-                           <td>BOM</td>
-                           <td>-</td>
-                           <td>-</td>
-                        </tr>
-                        <tr>
-                           <td class="highlight-medium">MEDIO</td>
-                           <td>-</td>
-                           <td>-</td>
-                           <td>MEDIO</td>
-                           <td>-</td>
-                           <td>MEDIO</td>
-                           <td>-</td>
-                           <td>-</td>
-                           <td>-</td>
-                        </tr>
-                        <tr>
-                           <td class="highlight-low">BAIXO</td>
-                           <td>-</td>
-                           <td>BAIXO</td>
-                           <td>-</td>
-                           <td>-</td>
-                           <td>-</td>
-                           <td>-</td>
-                           <td>BAIXO</td>
-                           <td>BAIXO</td>
-                        </tr>
-                
+                    
+                    <tbody id="tabelaCorpo">
+
                     </tbody>
+                        
                 </table>
             </div>
         </section>
-        </div>
+    
 
 
         <section>
@@ -139,7 +109,7 @@
             
             <form class="form-estilo">
                 <label for="estado2" class="form-label">Estado:</label>
-                <select id="estado2" name="estado" class="form-select" onchange="showHemocentros()">
+                <select id="estado2" onchange="showHemocentros2()">
                     <option value="">Selecione...</option>
                     <option value="ac">Acre</option>
                     <option value="al">Alagoas</option>
@@ -172,9 +142,7 @@
             </form>
 
             <h2>Hemocentros Disponíveis</h2>
-            <ul id="listaHemocentros2">
-                <p>Aqui serão listados os hemocentros de acordo com o estado selecionado</p>
-            </ul>
+            <ul id="listaHemocentros2"></ul>
         </section>
 
 
@@ -199,8 +167,9 @@
 
         <section class="depoimentos">
             <h2 class="depoimentos-titulo">DEPOIMENTOS</h2>
+            <div class="carousel">
             <div class="depoimentos-container">
-                <!-- Primeiro depoimento -->
+                
                 <div class="depo-box">
                     <div class="user">
                         <img class="img-responsive" src="./imagens/doador1.webp" alt="Riselle S Pereira">
@@ -212,7 +181,6 @@
                     </div>
                 </div>
         
-                <!-- Segundo depoimento -->
                 <div class="depo-box">
                     <div class="user">
                         <img class="img-responsive" src="./imagens/doador2.jpg" alt="João P.Silva">
@@ -224,7 +192,6 @@
                     </div>
                 </div>
         
-                <!-- Terceiro depoimento -->
                 <div class="depo-box">
                     <div class="user">
                         <img class="img-responsive" src="./imagens/doador3.jpg" alt="Tadeu José">
@@ -235,12 +202,119 @@
                     <p>"Minha primeira doação de sangue foi um marco importante para mim. Confesso que tive um pouco de receio, mas a vontade de ajudar falou mais alto. Ao ver o quão simples e rápido foi todo o processo, fiquei surpreso e satisfeito. Foi uma sensação incrível saber que, com esse pequeno gesto, eu poderia fazer a diferença na vida de alguém. Saí de lá com o coração leve e com a certeza de que voltarei mais vezes para doar"</p>
                     </div>
                 </div>
+
+                <div class="depo-box">
+                    <div class="user">
+                        <img class="img-responsive" src="./imagens/daodorrr.png" alt="Carlos Mendes">
+                    </div>
+                    <h3>Carlos Mendes</h3>
+                    <span class="position">Receptor</span>
+                    <div class="depoimento-texto">
+                    <p>"Quando fui diagnosticado com uma doença grave, precisei de várias transfusões de sangue. Sem a generosidade dos doadores, eu não estaria aqui hoje. Cada gota de sangue doada é uma chance a mais de viver."</p>
+                    </div>
+                </div>
+
+                <div class="depo-box">
+                    <div class="user">
+                        <img class="img-responsive" src="./imagens/doad0r.webp" alt="João Roberto">
+                    </div>
+                    <h3>João Roberto</h3>
+                    <span class="position">Doador</span>
+                    <div class="depoimento-texto">
+                    <p>"Nunca pensei em doar sangue até que uma campanha me chamou a atenção. A experiência foi muito mais fácil do que eu imaginava e me sinto bem por ter contribuído para salvar uma vida."</p>
+                    </div>
+                </div>
+
+                <div class="depo-box">
+                    <div class="user">
+                        <img class="img-responsive" src="./imagens/do4dor4.jpg" alt="Aurora Barros">
+                    </div>
+                    <h3>Aurora Barros</h3>
+                    <span class="position">Doadora</span>
+                    <div class="depoimento-texto">
+                    <p>"Após minha primeira doação, percebi como é fácil ajudar os outros e decidi tornar isso um hábito. É uma maneira simples de contribuir para a saúde e bem-estar de pessoas em necessidade."</p>
+                    </div>
+                </div>
+                
+                <div class="depo-box form-box">
+                    <h3>Envie seu Depoimento</h3>
+                    <form id="depoimentoForm" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="nome">Nome e Sobrenome:</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tipo">Você é:</label>
+                            <select id="tipo" name="tipo" required>
+                                <option value="">Selecione...</option>
+                                <option value="doador">Doador</option>
+                                <option value="receptor">Receptor</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="estado">Estado:</label>
+                            <input type="text" id="estado" name="estado" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="depoimento">Depoimento:</label>
+                            <textarea id="depoimento" name="depoimento" rows="4" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="imagem">Enviar Imagem:</label>
+                            <input type="file" id="imagem" name="imagem" accept="image/*" required>
+                        </div>
+                        
+                        <button type="submit">Enviar</button>
+                    </form>
+                    <div id="mensagemErro" style="color:red; display:none;">Por favor, preencha todos os campos corretamente.</div>
+                </div>
+                
+
             </div>
+
+            
+            <button class="carousel-button prev">
+                <img src="./imagens/gotaleft.png" alt="anterior">
+            </button>
+
+            <button class="carousel-button next">
+                <img src="./imagens/gotaright.png" alt="proximo">
+            </button>
+            
         </section>
-        
+    
 
         <footer>
             <p>© 2024 Hemovida</p>
         </footer>
+    <script src="./index.js">
+        function showHemocentros() {
+    const estado = document.getElementById("estado").value;
+    
+    if (estado) {
+       
+        if (stateData[estado]) {
+            renderTableData(stateData[estado]);
+        } else {
+         
+            const newData = generateRandomData();
+            stateData[estado] = newData;
+            renderTableData(newData);
+        }
+    } else {
+        document.getElementById("tabelaCorpo").innerHTML = ""; 
+    }
+}
+
+    </script>
 </body>
 </html>

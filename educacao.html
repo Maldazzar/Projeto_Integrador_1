@@ -33,6 +33,8 @@
                     <input type="text" placeholder="Digite aqui o que você procura">
                     <button type="submit">Buscar</button>
                 </form>
+                <button class="login-button">Login</button>
+
             </div>
     </header>
 
@@ -52,84 +54,91 @@
             </section>
 
 
-        <section id="infograficos">
-            <h2>Infográficos</h2>
-            <p>Explore nossos infográficos para descobrir de forma clara e visual a importância da doação de sangue e
-                entender todas as etapas do processo.</p>
-            <div class="infografico-container">
-                <div class="infografico-card">
-                    <a href="./imagens/Infográfico-doação-de-sangue-v4.png" target="_blank">
-                        <img src="./imagens/Infográfico-doação-de-sangue-v4.png" alt="Infográfico 1"
-                            class="infografico-img">
-                    </a>
-                    <div class="infografico-content">
-                        <h3>Salve Vidas</h3>
-                        <p>Uma bolsa = várias vidas</p>
+            <section id="infograficos">
+                <h2>Infográficos</h2>
+                <p>Explore nossos infográficos para descobrir de forma clara e visual a importância da doação de sangue e entender todas as etapas do processo.</p>
+                <div class="infografico-container">
+                    <div class="infografico-card" onclick="openInfograficoModal(this)">
+                        <img src="./imagens/Infográfico-doação-de-sangue-v4.png" alt="Salve Vidas" class="infografico-img">
+                        <div class="infografico-content">
+                            <h3>Salve Vidas</h3>
+                            <p>Uma bolsa = várias vidas</p>
+                        </div>
+                    </div>
+            
+                    <div class="infografico-card" onclick="openInfograficoModal(this)">
+                        <img src="./imagens/infograficoo.png" alt="Requisitos e Intervalos" class="infografico-img">
+                        <div class="infografico-content">
+                            <h3>Requisitos e Intervalos</h3>
+                            <p>Requisitos básicos</p>
+                        </div>
+                    </div>
+            
+                    <div class="infografico-card" onclick="openInfograficoModal(this)">
+                        <img src="./imagens/INFOGRÁFICO_ Confira as etapas da doação de sangue.jpeg" alt="Como é realizado?" class="infografico-img">
+                        <div class="infografico-content">
+                            <h3>Como é Realizado?</h3>
+                            <p>Etapas da Doação</p>
+                        </div>
                     </div>
                 </div>
-                <div class="infografico-card">
-                    <a href="./imagens/infograficoo.png" target="_blank">
-                        <img src="./imagens/infograficoo.png" alt="Infográfico 2" class="infografico-img">
-                    </a>
-                    <div class="infografico-content">
-                        <h3>Requisitos e Intervalos</h3>
-                        <p>Requisitos básicos</p>
-                    </div>
-                </div>
-                <div class="infografico-card">
-                    <a href="./imagens/INFOGRÁFICO_ Confira as etapas da doação de sangue.jpeg" target="_blank">
-                        <img src="./imagens/INFOGRÁFICO_ Confira as etapas da doação de sangue.jpeg" alt="Infográfico 3"
-                            class="infografico-img">
-                    </a>
-                    <div class="infografico-content">
-                        <h3>Como é Realizado?</h3>
-                        <p>Etapas da Doação</p>
-                    </div>
-                </div>
+            </section>
+            
+                
+            <div id="infograficoModal" class="modal-infografico">
+                <span class="close-infografico">&times;</span>
+                <div class="modal-content-infografico">
+                <img id="infograficoImg" src="" alt="Infográfico">
+                <div id="infograficoCaption" class="caption-infografico"></div>
             </div>
-        </section>
-
-
-
-        <section id="campanhas">
-            <h2>Campanhas</h2>
-            <p>Em nossas campanhas, temos o objetivo de envolver e inspirar você a contribuir para esta causa nobre e
-                vital.
-                Compartilhe esta mensagem com amigos e familiares e ajude-nos a expandir o alcance de nossa missão.
-                Juntos, podemos maximizar o impacto da nossa causa e garantir que mais vidas sejam salvas. A sua ação
-                faz toda a diferença. Junte-se a nós e seja parte desta transformação!</p>
-            <div class="card-container">
-                <div class="card">
-                    <img src="./imagens/1semana-nacional-doador-de-sangue-2020.jpg" alt="Campanha 1" class="card-img">
-                    <div class="card-content">
-                        <h3>Semana Nacional do Doador de Sangue</h3>
+        </div>
+            
+            <section id="campanhas">
+                <h2>Campanhas</h2>
+                <p>Descubra as nossas campanhas e participe para ajudar a aumentar a conscientização sobre a doação de sangue.</p>
+                <div class="campanha-container">
+                    <div class="campanha-card" onclick="openCampanhaModal(this)">
+                        <img src="./imagens/1semana-nacional-doador-de-sangue-2020.jpg" alt="Campanha 1" class="campanha-img1">
+                        <div class="campanha-content">
+                            <h3>CAMPANHA</h3>
+                            <p>Somos Todos O Mesmo Sangue</p>
+                        </div>
+                    </div>
+                    <div class="campanha-card" onclick="openCampanhaModal(this)">
+                        <img src="./imagens/whatsapp-image-2023-02-06-at-11.00.13.jpg" alt="Campanha 2" class="campanha-img2">
+                        <div class="campanha-content">
+                            <h3>CAMPANHA</h3>
+                            <p>Tipo Certo</p>
+                        </div>
+                    </div>
+                    <div class="campanha-card" onclick="openCampanhaModal(this)">
+                        <img src="./imagens/Americana-Osasco-e-Itaquá.png" alt="Campanha 3" class="campanha-img3">
+                        <div class="campanha-content">
+                            <h3>CAMPANHA</h3>
+                            <p>Seja Um Héroi</p>
+                        </div>
+                    </div>
+                    <div class="campanha-card" onclick="openCampanhaModal(this)">
+                        <img src="./imagens/Junho-vermelho.jpeg" alt="Campanha 4" class="campanha-img4">
+                        <div class="campanha-content">
+                            <h3>CAMPANHA</h3>
+                            <p>Mês Nacional Da Doação de Sangue</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="card">
-                    <img src="./imagens/Americana-Osasco-e-Itaquá.png" alt="Campanha 2" class="card-img">
-                    <div class="card-content">
-                        <h3>Campanha Seja O Herói</h3>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="./imagens/Junho-vermelho.jpeg" alt="Campanha 3" class="card-img">
-                    <div class="card-content">
-                        <h3>Campanha Junho Vermelho</h3>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="./imagens/whatsapp-image-2023-02-06-at-11.00.13.jpg" alt="Campanha 4" class="card-img">
-                    <div class="card-content">
-                        <h3>Campanha Tipo Certo</h3>
-                    </div>
-                </div>
+            </section>
+            
+            <div id="campanhaModal" class="modal">
+                <span class="close-campanha">&times;</span>
+                <img class="modal-content" id="campanhaImg">
+                <div id="campanhaCaption"></div>
             </div>
-        </section>
-
+            
+                    
+            
         <footer>
             <p>©2024 Hemovida</p>
         </footer>
+        <script src="educacao.js"></script> 
+
 </body>
