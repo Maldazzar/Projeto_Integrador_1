@@ -1,0 +1,644 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5fcff; 
+    line-height: 1.6;
+    overflow-y: scroll;
+    width: 100%;
+}
+/* INÍCIO DOS ESTILOS DO HEADER */
+header {
+    background-color: #C2141A;
+    color: #f5fcff;
+    display: flex;
+    padding: 10px 20px;
+}
+
+.htitle {
+    align-self: center;
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+}
+
+.nav {
+    margin: 0;
+    display: flex;
+    justify-content: right;
+}
+
+.nav-bar {
+    display:flex;
+    flex: 2;
+    flex-direction: column;
+    align-items: right;
+    margin: auto;
+}
+
+.nav ul {
+    list-style-type: none;
+    gap: 15px;
+    padding: 0;
+    margin: 0 20px 0 0;
+    display: flex;
+}
+.nav ul li {
+    padding: 15px 20px;
+}
+.nav ul li a {
+    color: #fff;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+.nav ul li a:hover {
+    background-color: #720202;
+}
+
+.menu-toggle {
+    display: none; 
+}
+
+.social-icons {
+    display: flex; 
+    justify-content: center; 
+    padding: 0;
+}
+  
+.social-icons a {
+    color: rgb(221, 13, 13);
+    margin: 0 10px; 
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #333; 
+}
+
+.social-li {
+    list-style-type: none;
+}
+
+.social-icons ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center;
+}
+
+#inputSearch{
+    width: 550px;
+}
+
+#link-logo {    
+    background-size: cover;
+    color: #91cee8;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    background-repeat: no-repeat;
+}
+#link-logo:hover {
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+#logo_title {
+    background-repeat:no-repeat;
+    background-size: contain;
+    display: flex;
+    flex:1;
+    background: none;
+}
+
+#navSearch {
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Estilos para telas menores (media query) */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 99;
+    }
+    .nav.open {
+        display: flex;
+    }
+    .nav ul li {
+        text-align: left;
+        width: 100%;
+    }
+    .menu-toggle {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 24px;
+        width: 30px;
+        position: relative;
+        z-index: 100;
+    }
+    .menu-toggle .bar {
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+    }
+    .menu-open .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu-open .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-open .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; 
+}
+
+.search-form input {
+    padding: 2px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-form button {
+    padding: 2px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #013842;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-form button:hover {
+    background-color: #a00400;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.terra-media {
+    margin:0 auto;
+}
+section {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+}
+section h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+section form {
+    margin-bottom: 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.form-estilo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px; 
+    max-width: 500px; 
+    padding: 8px; 
+    background-color: #f0f3f3;
+    border-radius: 10px;
+    border-bottom: 10px solid #013842c9;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.87); 
+    font-family: 'Roboto', sans-serif; 
+    overflow: hidden;
+}
+
+.form-label {
+    font-size: 20px; 
+    color: #8b0202;
+    font-weight: 700; 
+    margin-bottom: 8px; 
+    text-transform: capitalize; 
+}
+
+
+.form-select {
+    padding: 7px; 
+    border: 2px solid #b90500;
+    border-radius: 8px; 
+    font-size: 16px; 
+    color: #333; 
+    background-color: #fff; 
+    font-family: 'Roboto', sans-serif; 
+}
+
+.form-select:focus {
+    border-color: #b90500; 
+    background-color: #fefefe; 
+    outline: none; 
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); 
+}
+
+.form-submit {
+    padding: 12px 24px; 
+    border: none; 
+    border-radius: 8px; 
+    background-color: #b90500; 
+    color: #fff; 
+    font-size: 16px; 
+    font-weight: 700; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    text-align: center; 
+    font-family: 'Roboto', sans-serif; 
+}
+
+
+.table-container {
+    margin-top: 10px;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+}
+
+.table-container .table-box {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.table-container .table-title {
+    text-align: center;
+    background-color: #b90500;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: #030303;
+}
+
+th {
+    background-color: #b90500;
+    color: white;
+}
+
+.highlight-good {
+    background-color: green;
+    color: white;
+}
+
+.highlight-medium {
+    background-color: yellow;
+    color: black;
+}
+
+.highlight-low {
+    background-color: red;
+    color: white;
+}
+
+.depoimentos {
+    width: 100%;
+    padding: 20px;
+    background-image: url(./imagens/AdobeStock_738597227_Previewe3.png);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.depoimento-texto {
+    position: relative;
+    text-align: center;
+}
+
+.depoimentos-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+    width: calc(200% + 20px); 
+}
+
+.depoimentos-titulo {
+    text-align: center;
+    font-size: 45px;
+    color: #b90500;
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 0 auto 20px auto;
+    font-weight: bold;
+}
+
+.depo-box {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    background-color: rgb(219, 211, 211);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0px 8px 32px rgba(31, 38, 135, 0.37);
+    text-align: center;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.depo-box p {
+    text-align: justify;
+    font-size: 16px;
+    color: #030303;
+    font-family: "Pontano Sans", sans-serif;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+    margin-top: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.depo-box .user img {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.depo-box h3,
+.depo-box span {
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #013842c9;
+    transition: color 0.3s ease;
+    margin-top: 20px;
+}
+
+.depo-box h3 {
+    font-size: 20px;
+}
+
+.depo-box span {
+    font-size: 18px;
+    color: black;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.depoimentos-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+    width: 100%;
+}
+
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: -20px;
+}
+
+.next {
+    right: -20px;
+}
+
+.carousel-button img{
+    width:100px;
+    height: auto;
+}
+section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fefefe;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+section h2 {
+    font-size: 35px;
+    color: #b90500; 
+    margin-bottom: 20px;
+    border-bottom: 2px solid #b90500; 
+    padding-bottom: 20px;
+    font-family: 'Bebas Neue', sans-serif; 
+}
+
+.depoimentos-titulo {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.form-box {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form label {
+    color: #b90500; 
+    font-weight: bold; 
+}
+
+form button {
+    background-color: #b90500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #a00400;
+}
+
+
+.tipos-doacao ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tipos-doacao li {
+    background-color: #f0f3f3;
+    margin-bottom: 10px;
+    padding: 7px;
+    border-radius: 10px;
+    border: 5px solid #013842;
+    position: relative;
+}
+
+
+.tipos-doacao p {
+    margin: 0;
+    color: #0c0b0b;
+    margin-bottom: 18px;
+    font-family: "Bebas Neue", sans-serif;
+    position: relative;
+}
+
+.tipos-doacao li h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #b90500; 
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.tipos-doacao ul li p {
+    font-size: 18px;
+    color: #773a3a;
+    text-align: center;
+    font-weight: 500;
+    position: relative;
+}
+
+.tipos-doacao ul li h3::after {
+    content: "";
+    display: block;
+    width: 10%;
+    height: 4px;
+    background-color: #b90500;
+    border-radius: 2px;
+    margin-top: 5px;
+    transition: width 0.3s ease;
+    position: absolute;
+}
+
+
+#hemocentros {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+
+#listaHemocentros {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+main > section > p {
+    color: #0c0b0b;
+    font-size: 20px;
+    font-family: "Bebas Neue",sans-serif;
+    font-weight: 700;
+    
+}
+
+#hemocentros h2 {
+    font-size: 35px;
+    color: #b90500; 
+    margin-top: 40px; 
+    margin-bottom: 20px; 
+    padding-bottom: 10px;
+    font-family: 'Bebas Neue', sans-serif; 
+    border-bottom: 2px solid #b90500;
+}
+
+
+
+#listaHemocentros2 {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#listaHemocentros2 p {
+    font-size: 16px;
+    color: #666;
+    margin: 20px 0; /
+}
+
+#listaHemocentros2 li {
+    color: #b90500; 
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    gap: 7px;
+}
+
+
+footer {
+    background-color: #f6c2c2; 
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    color: #000; 
+}
