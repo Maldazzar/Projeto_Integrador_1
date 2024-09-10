@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f5fcff; /* Cor de fundo geral */
+    background-color: #f5fcff; 
     line-height: 1.6;
     overflow-y: scroll;
     width: 100%;
@@ -16,30 +16,20 @@ header {
     display: flex;
     padding: 10px 20px;
 }
-#logo_title {
-    background-repeat:no-repeat;
-    background-size: contain;
-    display: flex;
-    flex:1;
-}
-#link-logo {    
-    background-image:url('imagens/logo.png');
-    background-size: cover;
-    color: #91cee8;
-    display: inline-block;
-    padding: 10px;
-    text-decoration: none;
-}
-#link-logo:hover {
-    background-color: #ffffff;
-    border-radius: 20px;
-}
+
 .htitle {
     align-self: center;
     display: inline-block;
     margin: 0;
     padding: 10px;
 }
+
+.nav {
+    margin: 0;
+    display: flex;
+    justify-content: right;
+}
+
 .nav-bar {
     display:flex;
     flex: 2;
@@ -47,19 +37,7 @@ header {
     align-items: right;
     margin: auto;
 }
-#navSearch {
-    text-align: right;
-    margin: 0;
-    padding: 0;
-}
-#inputSearch{
-    width: 550px;
-}
-.nav {
-    margin: 0;
-    display: flex;
-    justify-content: right;
-}
+
 .nav ul {
     list-style-type: none;
     gap: 15px;
@@ -79,9 +57,72 @@ header {
 .nav ul li a:hover {
     background-color: #720202;
 }
+
 .menu-toggle {
-    display: none; /* Oculta o ícone de menu em telas maiores */
+    display: none; 
 }
+
+.social-icons {
+    display: flex; 
+    justify-content: center; 
+    padding: 0;
+}
+  
+.social-icons a {
+    color: rgb(221, 13, 13);
+    margin: 0 10px; 
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #333; 
+}
+
+.social-li {
+    list-style-type: none;
+}
+
+.social-icons ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center;
+}
+
+#inputSearch{
+    width: 550px;
+}
+
+#link-logo {    
+    background-size: cover;
+    color: #91cee8;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    background-repeat: no-repeat;
+}
+#link-logo:hover {
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+#logo_title {
+    background-repeat:no-repeat;
+    background-size: contain;
+    display: flex;
+    flex:1;
+    background: none;
+}
+
+#navSearch {
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+
+
 /* Estilos para telas menores (media query) */
 @media (max-width: 768px) {
     .nav {
@@ -128,8 +169,54 @@ header {
         transform: translateY(-8px) rotate(-45deg);
     }
 }
-/* FIM DOS ESTILOS DO HEADER */
-/* INÍCIO DOS ESTILOS DO MAIN */
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; 
+}
+
+.search-form input {
+    padding: 2px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-form button {
+    padding: 2px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #013842;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-form button:hover {
+    background-color: #a00400;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.terra-media {
+    margin:0 auto;
+}
+section {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+}
+section h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+section form {
+    margin-bottom: 20px;
+}
 
 .header-container {
     display: flex;
@@ -140,7 +227,6 @@ header {
     padding: 0 20px;
     box-sizing: border-box;
 }
-
 .form-estilo {
     display: flex;
     flex-direction: column;
@@ -544,34 +630,15 @@ main > section > p {
 }
 
 
-/* FIM DOS ESTILOS DO MAIN */
-/* INÍCIO DOS ESTILOS DO FOOTER */
 footer {
-    background-color: #f7c5c6;
-    color: #000;
+    background-color: #f6c2c2; 
+    padding: 20px 0;
     text-align: center;
-    padding: 10px 20px;
-    margin-bottom: 0;
+    font-family: Arial, sans-serif;
 }
 
-/* Footer social midia */
-
-li {
-    list-style-type: none;
-}
-
-.social-icons {
-    display: flex; /* Organiza os elementos em linha */
-    justify-content: center; /* Centraliza os ícones horizontalmente */
-}
-  
-.social-icons a {
-    color: rgb(221, 13, 13); /* Define a cor dos ícones como branco */
-    margin: 0 10px; /* Adiciona um espaçamento entre os ícones */
-}
-
-
-.social-icons a:hover {
-    color: #333; /* Cor dos ícones ao passar o mouse */
-    transform: scale(1.2); /* Aumenta o tamanho dos ícones ao passar o mouse */
+footer p {
+    margin: 0;
+    font-size: 16px;
+    color: #000; 
 }

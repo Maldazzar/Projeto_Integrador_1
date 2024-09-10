@@ -2,13 +2,20 @@
 <html lang="pt-br">
 <!-- CABEÇALHO DO NAVEGADOR -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <!-- Font Awesome para ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>Hemovida</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="home.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Hemovida</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Fjalla+One&family=Pontano+Sans:wght@300..700&family=Roboto&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+    </head>
+    
 </head>
 <!-- FIM DO CABEÇALHO DO NAVEGADOR -->
 <body>
@@ -47,9 +54,10 @@
     <main>
         <section>
             <h2>Estoque de Sangue Por Estado</h2>
-            <form>
-                <label for="estado">Estado:</label>
-                <select id="estado" name="estado" onchange="showHemocentros()">
+            <p>Escolha o Estado desejado:</p>
+            <form class="form-estilo">
+                <label for="estado" class="form-label">Estado:</label>
+                <select id="estado" name="estado" class="form-select" onchange="showHemocentros()">
                     <option value="">Selecione...</option>
                     <option value="ac">Acre</option>
                     <option value="al">Alagoas</option>
@@ -80,133 +88,255 @@
                     <option value="to">Tocantins</option>
                 </select>
             </form>
+
+        <div  class="table-container">
+            <div class="table-box" id ="estadoTabela">
+                <h2 class="table-title">Banco de Sangue</h2>
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Nivel</th>
+                            <th class="tipo">A +</th>
+                            <th class="tipo">A -</th>
+                            <th class="tipo">B +</th>
+                            <th class="tipo">B -</th>
+                            <th class="tipo">AB +</th>
+                            <th class="tipo">AB -</th>
+                            <th class="tipo">O +</th>
+                            <th class="tipo">O -</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody id="tabelaCorpo">
+
+                    </tbody>
+                        
+                </table>
+            </div>
         </section>
-        <table border="1">
-            <tr>
-                <td>baixo</td>
-                <td>A+</td>
-                <td>B+</td>
-                <td>B-</td>
-                <td>AB+</td>
-            </tr>
-            <tr>
-                <td>regular</td>
-                <td>AB-</td>
-                <td>O+</td>
-                <td>O-</td>
-            </tr>
-            <tr>
-                <td>adequado</td>
-            </tr>
-        </table>
-        
-        <aside>
-            <section id="hemocentros">
-                <h2>Hemocentros Próximos</h2>
-                <p>Escolha o Estado:</p>
-                <form>
-                    <select id="estado" name="estado" onchange="showHemocentros()">
-                        <option value="">Selecione...</option>
-                        <option value="ac">Acre</option>
-                        <option value="al">Alagoas</option>
-                        <option value="ap">Amapá</option>
-                        <option value="am">Amazonas</option>
-                        <option value="ba">Bahia</option>
-                        <option value="ce">Ceará</option>
-                        <option value="df">Distrito Federal</option>
-                        <option value="es">Espírito Santo</option>
-                        <option value="go">Goiás</option>
-                        <option value="ma">Maranhão</option>
-                        <option value="mt">Mato Grosso</option>
-                        <option value="ms">Mato Grosso do Sul</option>
-                        <option value="mg">Minas Gerais</option>
-                        <option value="pa">Pará</option>
-                        <option value="pb">Paraíba</option>
-                        <option value="pr">Paraná</option>
-                        <option value="pe">Pernambuco</option>
-                        <option value="pi">Piauí</option>
-                        <option value="rj">Rio de Janeiro</option>
-                        <option value="rn">Rio Grande do Norte</option>
-                        <option value="rs">Rio Grande do Sul</option>
-                        <option value="ro">Rondônia</option>
-                        <option value="rr">Roraima</option>
-                        <option value="sc">Santa Catarina</option>
-                        <option value="sp">São Paulo</option>
-                        <option value="se">Sergipe</option>
-                        <option value="to">Tocantins</option>
-                    </select>
-                </form>
-                    <h2>Hemocentros Disponíveis</h2>
-                    <ul id="listaHemocentros">
-                        <p>Aqui serão listados os hemocentros de acordo com o estado selecionado</p>
-                    </ul>
-            </section>
-            <section id="como-doar">
-                <h2>Como Doar?</h2>
-                <p>Procurar um hemocentro mais próximo de você e fazer o preenchimento do questionário doador.</p>
-            </section>
-            <section id="tipos-doacao">
-                <h2>Tipos de Doação</h2>
-                <ul>
-                    <li><h3>Sangue Total</h3><p>Coleta de sangue dos doadores voluntários.</p></li>
-                    <li><h3>Plaquetas por Aférese</h3><p>Você pode doar parte do seu sangue por um processo diferente chamado aférese.</p></li>
-                    <li><h3>Doação de Medula Óssea</h3><p>Na coleta de medula óssea, o procedimento ocorre em centro cirúrgico.</p></li>
-                </ul>
-            </section>
-            <section id="depoimentos">
-                <h2>Depoimentos</h2>
-                <article>
-                    <h3>Depoimento 1</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span>Autor do Depoimento 1</span>
-                </article>
-                <article>
-                    <h3>Depoimento 2</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span>Autor do Depoimento 2</span>
-                </article>
-                <article>
-                    <h3>Depoimento 3</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span>Autor do Depoimento 3</span>
-                </article>
-            </section> 
-            <section id="campanhas">
-                <h2>Campanhas</h2>
-                <p>Nossas campanhas destacam a importância da doação de sangue.</p>
-                <div class="campanhas-container">
-                    <div class="campanha">
-                        <img src="./imagens/1semana-nacional-doador-de-sangue-2020.jpg" alt="Campanha 1">
-                        <p>Semana Nacional do Doador de Sangue</p>
+    
+
+
+        <section>
+            <h2>Hemocentro mais próximo</h2>
+            <p>Escolha o Estado desejado:</p>
+            
+            <form class="form-estilo">
+                <label for="estado2" class="form-label">Estado:</label>
+                <select id="estado2" onchange="showHemocentros2()">
+                    <option value="">Selecione...</option>
+                    <option value="ac">Acre</option>
+                    <option value="al">Alagoas</option>
+                    <option value="ap">Amapá</option>
+                    <option value="am">Amazonas</option>
+                    <option value="ba">Bahia</option>
+                    <option value="ce">Ceará</option>
+                    <option value="df">Distrito Federal</option>
+                    <option value="es">Espírito Santo</option>
+                    <option value="go">Goiás</option>
+                    <option value="ma">Maranhão</option>
+                    <option value="mt">Mato Grosso</option>
+                    <option value="ms">Mato Grosso do Sul</option>
+                    <option value="mg">Minas Gerais</option>
+                    <option value="pa">Pará</option>
+                    <option value="pb">Paraíba</option>
+                    <option value="pr">Paraná</option>
+                    <option value="pe">Pernambuco</option>
+                    <option value="pi">Piauí</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="rn">Rio Grande do Norte</option>
+                    <option value="rs">Rio Grande do Sul</option>
+                    <option value="ro">Rondônia</option>
+                    <option value="rr">Roraima</option>
+                    <option value="sc">Santa Catarina</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="se">Sergipe</option>
+                    <option value="to">Tocantins</option>
+                </select>
+            </form>
+
+            <h2>Hemocentros Disponíveis</h2>
+            <ul id="listaHemocentros2"></ul>
+        </section>
+
+
+        <section class="tipos-doacao">
+            <h2>Tipos de Doação</h2>
+            <p>Existem diferentes formas de contribuir para a saúde e bem-estar dos pacientes. Conheça os tipos de doação disponíveis:</p>
+            <ul>
+                <li>
+                    <h3>Sangue Total</h3>
+                    <p>A coleta é feita diretamente do doador, fornecendo uma unidade de sangue completo para uso geral.</p>
+                </li>
+                <li>
+                    <h3>Plaquetas por Aférese</h3>
+                    <p> Um processo especializado que coleta apenas as plaquetas do sangue, utilizando um equipamento chamado aférese.</p>
+                </li>
+                <li>
+                    <h3>Doação de Medula Óssea</h3> 
+                    <p>Envolve a coleta de medula óssea em um centro cirúrgico para tratamentos específicos, oferecendo uma chance vital para pacientes com doenças graves.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="depoimentos">
+            <h2 class="depoimentos-titulo">DEPOIMENTOS</h2>
+            <div class="carousel">
+            <div class="depoimentos-container">
+                
+                <div class="depo-box">
+                    <div class="user">
+                        <img class="img-responsive" src="./imagens/doador1.webp" alt="Riselle S Pereira">
                     </div>
-                    <div class="campanha">
-                        <img src="./imagens/Americana-Osasco-e-Itaquá.png" alt="Campanha 2">
-                        <p>Americana, Osasco e Itaquá</p>
-                    </div>
-                    <div class="campanha">
-                        <img src="./imagens/Junho-vermelho.jpeg" alt="Campanha 3">
-                        <p>Junho Vermelho</p>
-                    </div>
-                    <div class="campanha">
-                        <img src="./imagens/whatsapp-image-2023-02-06-at-11.00.13.jpg" alt="Campanha 4">
-                        <p>Campanha WhatsApp</p>
+                    <h3>Riselle S. Pereira</h3>
+                    <span class="position">Doadora</span>
+                    <div class="depoimento-texto">
+                    <p>"Sou doadora de sangue há 10 anos aqui em Pernambuco, e essa jornada tem sido uma das mais gratificantes da minha vida. A primeira vez que doei foi por acaso, um amigo estava precisando e fui incentivada a ajudar. Desde então, continuo doando regularmente, e é sempre um sentimento incrível saber que estou ajudando a salvar vidas. A equipe de atendimento é maravilhosa e sempre me faz sentir bem-vinda e confortável. A doação de sangue é um pequeno gesto que pode fazer uma grande diferença, e eu encorajo todos a se tornarem doadores. Vale a pena!"</p>
                     </div>
                 </div>
-            </section>
+        
+                <div class="depo-box">
+                    <div class="user">
+                        <img class="img-responsive" src="./imagens/doador2.jpg" alt="João P.Silva">
+                    </div>
+                    <h3>João P. Silva</h3>
+                    <span class="position">Receptor</span>
+                    <div class="depoimento-texto">
+                    <p>João precisou de uma doação de sangue para um procedimento médico urgente. O processo foi conduzido de maneira rápida e eficaz, e a doação foi crucial para sua recuperação. Ele é eternamente grato a todos os doadores que possibilitaram essa cirurgia. Cada doação é um ato de solidariedade que transforma vidas.</p>
+                    </div>
+                </div>
+        
+                <div class="depo-box">
+                    <div class="user">
+                        <img class="img-responsive" src="./imagens/doador3.jpg" alt="Tadeu José">
+                    </div>
+                    <h3>Tadeu José</h3>
+                    <span class="position">Doador</span>
+                    <div class="depoimento-texto">
+                    <p>"Minha primeira doação de sangue foi um marco importante para mim. Confesso que tive um pouco de receio, mas a vontade de ajudar falou mais alto. Ao ver o quão simples e rápido foi todo o processo, fiquei surpreso e satisfeito. Foi uma sensação incrível saber que, com esse pequeno gesto, eu poderia fazer a diferença na vida de alguém. Saí de lá com o coração leve e com a certeza de que voltarei mais vezes para doar"</p>
+                    </div>
+                </div>
+
+                <div class="depo-box">
+                    <div class="user">
+                        <img class="img-responsive" src="./imagens/daodorrr.png" alt="Carlos Mendes">
+                    </div>
+                    <h3>Carlos Mendes</h3>
+                    <span class="position">Receptor</span>
+                    <div class="depoimento-texto">
+                    <p>"Quando fui diagnosticado com uma doença grave, precisei de várias transfusões de sangue. Sem a generosidade dos doadores, eu não estaria aqui hoje. Cada gota de sangue doada é uma chance a mais de viver."</p>
+                    </div>
+                </div>
+
+                <div class="depo-box">
+                    <div class="user">
+                        <img class="img-responsive" src="./imagens/doad0r.webp" alt="João Roberto">
+                    </div>
+                    <h3>João Roberto</h3>
+                    <span class="position">Doador</span>
+                    <div class="depoimento-texto">
+                    <p>"Nunca pensei em doar sangue até que uma campanha me chamou a atenção. A experiência foi muito mais fácil do que eu imaginava e me sinto bem por ter contribuído para salvar uma vida."</p>
+                    </div>
+                </div>
+
+                <div class="depo-box">
+                    <div class="user">
+                        <img class="img-responsive" src="./imagens/do4dor4.jpg" alt="Aurora Barros">
+                    </div>
+                    <h3>Aurora Barros</h3>
+                    <span class="position">Doadora</span>
+                    <div class="depoimento-texto">
+                    <p>"Após minha primeira doação, percebi como é fácil ajudar os outros e decidi tornar isso um hábito. É uma maneira simples de contribuir para a saúde e bem-estar de pessoas em necessidade."</p>
+                    </div>
+                </div>
+                
+                <div class="depo-box form-box">
+                    <h3>Envie seu Depoimento</h3>
+                    <form id="depoimentoForm" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="nome">Nome e Sobrenome:</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tipo">Você é:</label>
+                            <select id="tipo" name="tipo" required>
+                                <option value="">Selecione...</option>
+                                <option value="doador">Doador</option>
+                                <option value="receptor">Receptor</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="estado">Estado:</label>
+                            <input type="text" id="estado" name="estado" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="depoimento">Depoimento:</label>
+                            <textarea id="depoimento" name="depoimento" rows="4" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="imagem">Enviar Imagem:</label>
+                            <input type="file" id="imagem" name="imagem" accept="image/*" required>
+                        </div>
+                        
+                        <button type="submit">Enviar</button>
+                    </form>
+                    <div id="mensagemErro" style="color:red; display:none;">Por favor, preencha todos os campos corretamente.</div>
+                </div>
+                
+
+            </div>
+
             
-        </aside>
+            <button class="carousel-button prev">
+                <img src="./imagens/gotaleft.png" alt="anterior">
+            </button>
+
+            <button class="carousel-button next">
+                <img src="./imagens/gotaright.png" alt="proximo">
+            </button>
+            
+        </section>
     </main>
-    <!-- FIM DO CONTEÚDO DA PÁGINA-->
-    <!-- INÍCIO DO RODAPÉ DA PÁGINA-->
+
     <footer>
         <p>© 2024 Hemovida</p>
-        <ul class="social-icons">
-            <li><a href="https://twitter.com/suaempresa" target="_blank"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.facebook.com/suaempresa" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="https://www.instagram.com/suaempresa" target="_blank"><i class="fab fa-instagram"></i></a></li>
-        </ul>
+        <div class="social-icons">
+            <ul>
+             <li><a href="https://twitter.com/suaempresa" target="_blank"><i class="fab fa-twitter"></i></a></li>
+             <li><a href="https://www.facebook.com/suaempresa" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+             <li><a href="https://www.instagram.com/suaempresa" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
     </footer>
-    <!-- FIM DO RODAPÉ DA PÁGINA-->
-    <script src="js/script.js"></script>
+
+    <script src="./home.js">
+        function showHemocentros() {
+    const estado = document.getElementById("estado").value;
+    
+    if (estado) {
+       
+        if (stateData[estado]) {
+            renderTableData(stateData[estado]);
+        } else {
+         
+            const newData = generateRandomData();
+            stateData[estado] = newData;
+            renderTableData(newData);
+        }
+    } else {
+        document.getElementById("tabelaCorpo").innerHTML = ""; 
+    }
+}
+
+    </script>
 </body>
 </html>
